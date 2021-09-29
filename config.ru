@@ -2,9 +2,5 @@
 
 require_relative 'config/environment'
 
-if Rails.env.development?
-    run Rails.application
-else
-    run Proc.new {[200,{'Content-Type' => 'text/plain'}, ["hello world"]]}
-end
+run Rails.application
 
